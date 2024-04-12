@@ -8,13 +8,58 @@ const URL = id
 let btnReset = document.getElementById("resetBtn");
 let btnInvia = document.getElementById("inviaDati");
 let form = document.getElementById("formBackOffice");
+let divAlert = document.createElement("div");
 
 const nameProduct = document.getElementById("nomeProdotto");
 const description = document.getElementById("description");
 const brand = document.getElementById("brand");
 const url = document.getElementById("url");
 const price = document.getElementById("price");
-///richiesta
+
+let removeAlert = () => {
+  setTimeout(() => {
+    divAlert.remove();
+  }, 2000);
+};
+
+//DELETE
+if (id) {
+  btnReset.addEventListener("click", () => {
+    fetch(URL_STRIVE + id, {
+      method: "DELETE",
+      headers: {
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjE4ZGNiNjdmMzA0NjAwMWFlNTlmNTIiLCJpYXQiOjE3MTI5MDUzOTgsImV4cCI6MTcxNDExNDk5OH0.pExfN1ObFRECM0u3t85jrEzssbuNE_rtZoZxqM4KwyI",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Errore nella richiesta HTTP");
+        }
+        return response.json();
+      })
+      .then((elementoEliminato) => {
+        console.log("Prodotto eliminato:", elementoEliminato);
+        divAlert.classList.add("alert", "alert-success", "text-center");
+        divAlert.innerText = "Prodotto eliminato!";
+
+        document.querySelector("header").appendChild(divAlert);
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 1500);
+      })
+      .catch((error) => {
+        console.error("Errore:", error);
+        divAlert.innerText =
+          "L'eliminazione non è andata a buon fine: " + error;
+        divAlert.classList.add("alert", "alert-danger", "text-center");
+        document.querySelector("header").appendChild(divAlert);
+        removeAlert();
+      });
+  });
+}
+
+///richiesta info per popolare campi input
 
 const getRequest = () => {
   if (id) {
@@ -77,26 +122,23 @@ const strive = () => {
       })
       .then((data) => {
         console.log("Prodotto creato/modificato con successo:", data);
-        let divAlert = document.createElement("div");
-        divAlert.classList.add("alert", "alert-success");
+        divAlert.classList.add("alert", "alert-success", "text-center");
         divAlert.innerText = id
-          ? "Prodotto modificato con successo!"
+          ? "Prodotto modificato con successo! " +
+            setTimeout(() => {
+              window.location.href = "index.html";
+            }, 1500)
           : "Prodotto creato con successo!";
         document.querySelector("header").appendChild(divAlert);
         form.reset();
-        setTimeout(() => {
-          divAlert.remove();
-        }, 1500);
+        removeAlert();
       })
       .catch((error) => {
         console.error("Errore:", error);
-        let divAlert = document.createElement("div");
         divAlert.innerText = error;
-        divAlert.classList.add("alert", "alert-danger");
+        divAlert.classList.add("alert", "alert-danger", "text-center");
         document.querySelector("header").appendChild(divAlert);
-        setTimeout(() => {
-          divAlert.remove();
-        }, 3000);
+        removeAlert();
       });
   });
 };

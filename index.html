@@ -17,53 +17,88 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header>
-      <div class="collapse bg-dark" id="navbarToggleExternalContent">
+    <header class="mb-5">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light text-dark"
+      >
         <div class="container">
-          <div class="row flex-column">
-            <div class="col-sm-8 col-md-7 py-4 text-white">
-              <a href="backoffice.html">Back Office</a>
-              <p class="text-gray">This area is reserved for administrators.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid justify-content-between">
-          <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              aria-hidden="true"
-              class="me-2"
-              viewBox="0 0 24 24"
-              focusable="false"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
-              />
-            </svg>
-            <strong>STORE|API</strong>
-          </a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarToggleExternalContent"
-            aria-controls="navbarToggleExternalContent"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          <a class="navbar-brand" href="#"> STORE | API </a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 opacity-50">
+              <li class="nav-item">
+                <a class="nav-link active" href="index">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#"> Telefonia </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#"
+                  >Audio, Cuffie e Navigatori</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#"
+                  >Fotografia, Video e Droni</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">PC Gaming e Componenti</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html"
+                    ><i class="bi bi-search" id="iSearch"> </i
+                  ></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                      />
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu container-fluid">
+                    <li>
+                      <a
+                        class="dropdown-item container-fluid"
+                        href="backoffice.html"
+                        >Settings</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -92,43 +127,52 @@
               aria-label="Slide 3"
             ></button>
           </div>
-          <div class="carousel-inner">
+          <div class="carousel-inner" id="carousel">
             <div class="carousel-item active" data-bs-interval="10000">
               <img
-                src="https://images.unsplash.com/photo-1556656793-08538906a9f8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1580234811497-9df7fd2f357e?q=80&w=1767&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 class="d-block w-100 object-fit-cover"
                 alt="smartphone by unsplash"
               />
               <div class="carousel-caption d-none d-md-block">
-                <h5>SMARTPHONE</h5>
+                <h5>Offerte Esclusive</h5>
                 <p>
-                  Some representative placeholder content for the first slide.
+                  Scopri le nostre offerte esclusive! Risparmia su una vasta
+                  selezione di prodotti di alta qualità. Approfitta subito di
+                  sconti imperdibili su smartphone, laptop e molto altro!
                 </p>
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
               <img
-                src="https://images.unsplash.com/photo-1583573636246-18cb2246697f?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 class="d-block w-100 object-fit-cover"
                 alt="smartphone by unsplash"
               />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
+                <h5>Ultimi Arrivi!</h5>
                 <p>
-                  Some representative placeholder content for the second slide.
+                  I nostri ultimi arrivi sono finalmente qui! Esplora le ultime
+                  novità nel nostro catalogo, dai dispositivi smart ai grandi
+                  elettrodomestici. Trova il prodotto perfetto per te e aggiorna
+                  il tuo lifestyle oggi stesso!
                 </p>
               </div>
             </div>
             <div class="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1587131664239-885aa135f8a6?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1574602526089-988ac5a80023?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 class="d-block w-100 object-fit-cover"
                 alt="smartphone by unsplash"
               />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
+                <h5>Promozione del mese!</h5>
                 <p>
-                  Some representative placeholder content for the third slide.
+                  Non perdere le promozioni del mese! Approfitta di offerte
+                  esclusive su una varietà di prodotti. Sconti incredibili ti
+                  aspettano su elettronica, elettrodomestici e molto altro.
+                  Affrettati, le promozioni sono disponibili solo per un tempo
+                  limitato!
                 </p>
               </div>
             </div>
