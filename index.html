@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header class="mb-5">
+    <header>
       <nav
         class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light text-dark"
       >
@@ -102,7 +102,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main id="indexMain">
       <section id="carousel">
         <div id="carouselExampleDark" class="carousel carousel-dark slide">
           <div class="carousel-indicators">
@@ -135,44 +135,38 @@
                 alt="smartphone by unsplash"
               />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Offerte Esclusive</h5>
-                <p>
-                  Scopri le nostre offerte esclusive! Risparmia su una vasta
-                  selezione di prodotti di alta qualità. Approfitta subito di
-                  sconti imperdibili su smartphone, laptop e molto altro!
+                <h5 class="text-white">Offerte Esclusive</h5>
+                <p class="text-white fw-bold">
+                  Approfitta subito di sconti imperdibili su smartphone, laptop
+                  e molto altro!
                 </p>
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
               <img
-                src="https://plus.unsplash.com/premium_photo-1680985551009-05107cd2752c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1608386390658-86cf60bcf61a?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1608386390658-86cf60bcf61a?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 class="d-block w-100 object-fit-cover"
                 alt="smartphone by unsplash"
               />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Ultimi Arrivi!</h5>
-                <p>
-                  I nostri ultimi arrivi sono finalmente qui! Esplora le ultime
-                  novità nel nostro catalogo, dai dispositivi smart ai grandi
-                  elettrodomestici. Trova il prodotto perfetto per te e aggiorna
-                  il tuo lifestyle oggi stesso!
+                <h5 class="text-white">Ultimi Arrivi!</h5>
+                <p class="text-light fw-bold">
+                  Esplora le ultime novità nel nostro catalogo, dai dispositivi
+                  smart ai grandi elettrodomestici.
                 </p>
               </div>
             </div>
             <div class="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1574602526089-988ac5a80023?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1609085174857-cfea32ae0140?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 class="d-block w-100 object-fit-cover"
                 alt="smartphone by unsplash"
               />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Promozione del mese!</h5>
-                <p>
-                  Non perdere le promozioni del mese! Approfitta di offerte
-                  esclusive su una varietà di prodotti. Sconti incredibili ti
+                <h5 class="text-white">Promozione del mese!</h5>
+                <p class="text-white fw-bold">
+                  Non perdere le promozioni del mese! Sconti incredibili ti
                   aspettano su elettronica, elettrodomestici e molto altro.
-                  Affrettati, le promozioni sono disponibili solo per un tempo
-                  limitato!
                 </p>
               </div>
             </div>
@@ -197,7 +191,7 @@
           </button>
         </div>
       </section>
-      <div class="row mt-5" id="container"></div>
+      <div class="row mt-5 justify-content-center" id="container"></div>
     </main>
     <footer class="text-muted"></footer>
     <script

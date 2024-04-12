@@ -20,7 +20,16 @@ const createElement = () => {
       products.forEach((product) => {
         let container = document.getElementById("container");
         let col = document.createElement("div");
-        col.classList.add("col", "mb-5", "col-md-4");
+        col.classList.add(
+          "col",
+          "mb-5",
+          "col-md-3",
+          "p-4",
+          "rounded-4",
+          "bg-white",
+          "mx-2"
+        );
+        col.id = "colIndex";
 
         let imgCard = document.createElement("img");
         imgCard.src = product.imageUrl;
@@ -41,7 +50,7 @@ const createElement = () => {
         p.textContent = `€` + product.price;
 
         let btnAdmin = document.createElement("button");
-        btnAdmin.classList.add("btn", "btn-outline-success");
+        btnAdmin.classList.add("btn", "btn-outline-secondary");
         btnAdmin.innerText = "Modifica";
         btnAdmin.onclick = () => {
           window.location.href = "backoffice.html?id=" + product._id;

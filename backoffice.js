@@ -9,6 +9,8 @@ let btnReset = document.getElementById("resetBtn");
 let btnInvia = document.getElementById("inviaDati");
 let form = document.getElementById("formBackOffice");
 let divAlert = document.createElement("div");
+let addProductTitle = document.getElementById("addProduct");
+let btnElimina = document.getElementById("btnElimina");
 
 const nameProduct = document.getElementById("nomeProdotto");
 const description = document.getElementById("description");
@@ -146,8 +148,11 @@ const strive = () => {
 window.onload = () => {
   if (id) {
     btnInvia.innerText = "Modifica";
+    addProductTitle.innerText = "Modifica il prodotto";
+    btnElimina.disabled = false;
   } else {
     btnInvia.innerText = "Crea";
+    btnElimina.disabled = true;
   }
   getRequest();
   strive();
